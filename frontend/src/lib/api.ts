@@ -1,5 +1,3 @@
-
-
 interface FormData {
   aadhaarNumber: string;
   nameAsPerAadhaar: string;
@@ -14,7 +12,10 @@ type FastAPIValidationError = {
 };
 
 export async function submitRegistration(data: FormData) {
-  const response = await fetch('http://127.0.0.1:8000/submit', {
+  // This is the new, dynamic URL logic
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+  
+  const response = await fetch(`${API_URL}/submit`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
