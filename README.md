@@ -121,7 +121,7 @@ pip install -r requirements.txt
 - Create a file named `.env` in the `backend` directory.
 - Add your database connection string to it:
 ```env
-DATABASE_URL="postgresql://postgres:Gulfam%402003@localhost:5432/mydatabase"
+DATABASE_URL="postgresql://postgres:OurPassword@localhost:5432/database_name"
 ```
 > **Note:** We will also need to update `backend/app/database.py` to read this variable.
 
@@ -210,3 +210,6 @@ cd frontend
 # Run Jest
 npm test
 ```
+
+# Important Note
+We’re not scraping directly . Instead, we are using a manually created JSON file that follows the same structure as the expected scraped output.
