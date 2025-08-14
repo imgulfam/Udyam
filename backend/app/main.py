@@ -14,7 +14,10 @@ app = FastAPI(
     description="API to handle form submissions mimicking the Udyam portal."
 )
 
-origins = ["http://localhost:3000"]
+origins = [
+    "http://localhost:3000",
+    "https://udyam-nine.vercel.app", # Add your live Vercel URL here
+]
 
 app.add_middleware(
     CORSMiddleware,
