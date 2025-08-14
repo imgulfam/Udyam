@@ -1,0 +1,14 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Environment files
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Test databases
+test.db
+*.db-journal
